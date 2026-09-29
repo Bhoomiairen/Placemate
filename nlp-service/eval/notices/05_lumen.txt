@@ -1,0 +1,16 @@
+Lumen Fintech Internship + PPO Opportunity
+
+Position: Backend Developer Intern (6 months, with Pre-Placement Offer)
+Stipend: Rs. 35,000/- per month
+PPO CTC: 12 LPA
+Location: Remote / Gurugram
+
+Criteria:
+CGPA: 7.5 and above
+No percentage criteria for 10th and 12th
+Open to CSE and IT students of the 2027 batch
+Backlogs: Not allowed
+
+Tech: Node.js, Express, MongoDB, REST APIs, Git, JavaScript
+
+Registration closes on October 10, 2026

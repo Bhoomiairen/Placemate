@@ -1,0 +1,15 @@
+Hello everyone,
+
+Greetings from the Placement Cell!
+
+We are happy to announce the on-campus recruitment drive of Zephyr Cloud Solutions for the role of Cloud Engineer.
+
+Eligible streams: Circuit branches only (CSE, IT, EXTC, AI & ML, Data Science)
+Academic criteria: Class X: 70%, Class XII: 65%, CGPA 3.0/4 or equivalent
+Students should not have any active backlogs. Past backlogs that are cleared are acceptable.
+
+Salary: 10 - 12 LPA
+Skills: AWS, Docker, Kubernetes, Linux, Python, CI/CD
+
+Register on or before 8th October 2026.
+The drive will be held on 15 Oct 2026 at 9:30 AM.
