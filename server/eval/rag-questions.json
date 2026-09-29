@@ -1,0 +1,20 @@
+{
+  "_comment": "Questions about the 12 sample drives (npm run seed). 'expect' lists companies that count as a correct source; any one is enough. Add questions about your real drives the same way.",
+  "questions": [
+    {"q": "Which companies are hiring for data analyst roles?", "expect": ["Kestrel Analytics"]},
+    {"q": "What is the bond period at Orbit Systems?", "expect": ["Orbit Systems"]},
+    {"q": "Which drive offers a stipend with a pre-placement offer?", "expect": ["Lumen Fintech"]},
+    {"q": "Which drives want Kubernetes or cloud skills?", "expect": ["Zephyr Cloud Solutions"]},
+    {"q": "Where is the job location for the Polaris Bank role?", "expect": ["Polaris Bank"]},
+    {"q": "Who is hiring machine learning engineers and what CGPA do they need?", "expect": ["Vertex AI Labs"]},
+    {"q": "Is there a drive for electronics students interested in chip design verification?", "expect": ["Quanta Semiconductors"]},
+    {"q": "Which drive allows students with up to 2 backlogs?", "expect": ["Harbor Logistics"]},
+    {"q": "When is the online test for Nimbus Technologies?", "expect": ["Nimbus Technologies"]},
+    {"q": "Which companies are open to all branches?", "expect": ["Kestrel Analytics", "Granite Consulting", "Harbor Logistics", "Cobalt Retail"]},
+    {"q": "What skills does the BrightPath full stack role require?", "expect": ["BrightPath EdTech"]},
+    {"q": "Is there a management trainee role?", "expect": ["Harbor Logistics"]},
+    {"q": "Which drives ask for Tableau?", "expect": ["Cobalt Retail"]},
+    {"q": "Which company says there is no bond?", "expect": ["Granite Consulting"]},
+    {"q": "Which drive is for a graduate engineer trainee?", "expect": ["Orbit Systems"]}
+  ]
+}
