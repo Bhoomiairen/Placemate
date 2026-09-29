@@ -1,0 +1,39 @@
+# Run everything with one command:   docker compose up --build
+# Then open http://localhost:8080
+services:
+  mongo:
+    image: mongo:7
+    restart: unless-stopped
+    volumes:
+      - mongo-data:/data/db
+
+  nlp:
+    build: ./nlp-service
+    restart: unless-stopped
+
+  server:
+    build: ./server
+    restart: unless-stopped
+    depends_on: [mongo, nlp]
+    environment:
+      MONGO_URI: mongodb://mongo:27017/placemate
+      NLP_URL: http://nlp:5001
+      JWT_SECRET: ${JWT_SECRET:?Create a .env file next to docker-compose.yml with JWT_SECRET=<long random string>}
+      CLIENT_ORIGIN: http://localhost:8080
+      SEED_NOTICES_DIR: /app/seed-notices
+      # Ask PlaceMate uses Ollama running on your computer (not in Docker)
+      OLLAMA_URL: http://host.docker.internal:11434
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./nlp-service/eval/notices:/app/seed-notices:ro
+
+  client:
+    build: ./client
+    restart: unless-stopped
+    depends_on: [server]
+    ports:
+      - "8080:80"
+
+volumes:
+  mongo-data:
