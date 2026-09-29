@@ -22,6 +22,10 @@ Drives are shared. One student adds a notice and the whole batch sees it, each w
 
 ![Reviewing extracted fields](docs/screenshots/extraction-review.png)
 
+**Ask PlaceMate:** a question answered from the stored notices, with citations linked to each drive.
+
+![Ask PlaceMate](docs/screenshots/ask.png)
+
 ---
 
 ## Architecture
@@ -218,16 +222,17 @@ Render's free services sleep when idle, so the first request after a while takes
 placemate/
 ├── client/                 React frontend
 │   └── src/
-│       ├── pages/          Dashboard, Drives, AddDrive, DriveDetail, Resume, Profile, AuthPage
+│       ├── pages/          Dashboard, Drives, AddDrive, DriveDetail, Ask, Resume, Profile, AuthPage
 │       ├── components/     DriveForm, Charts, Layout, ui
 │       └── lib/            api client, auth context, formatting
 ├── server/                 Express API
 │   ├── src/
-│   │   ├── models/         User, Drive, Application, ResumeVersion
-│   │   ├── routes/         auth, profile, resume, drives, insights
-│   │   ├── services/       NLP client, per-student drive view
-│   │   └── utils/          eligibility rules
-│   ├── scripts/seed.js
+│   │   ├── models/         User, Drive, Application, ResumeVersion, DriveChunk
+│   │   ├── routes/         auth, profile, resume, drives, insights, assistant
+│   │   ├── services/       NLP client, per-student drive view, Ollama client, RAG
+│   │   └── utils/          eligibility rules, RAG helpers (chunking, retrieval, prompt)
+│   ├── scripts/            seed, reindex, eval-rag
+│   ├── eval/               RAG test questions
 │   └── tests/
 ├── nlp-service/            Flask NLP microservice
 │   ├── extractor.py        notice → eligibility criteria
